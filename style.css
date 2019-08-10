@@ -1,0 +1,636 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:500&display=swap');
+
+/* html styling */
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+/* nav bar styling */
+header li, a, .logout {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  color: white;
+  text-decoration: none;
+}
+
+#list-left {
+  margin: 0px 300px 0px 0px;
+}
+
+#list-right {
+  margin: 0px 0px 0px 300px;
+}
+
+header {
+  position: fixed;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background-color: pink;
+  height: 60px;
+  z-index: 4;
+  transition: height 350ms ease-in-out;
+}
+
+.logo {
+  cursor: pointer;
+  width: 15%;
+    margin-top: 0%;
+    margin-left: -4%;
+}
+
+.nav-links {
+  list-style: none;
+}
+
+.nav-links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav-links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav-links li a:hover {
+  color: #0088a9;
+}
+
+.logout {
+  padding: 9px 25px;
+  background-color: rgba(0, 136, 169, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.logout:hover {
+  background-color: rgba(0, 136, 169, 0.8);
+}
+
+#login {
+  display: flex;
+  background-color: pink;
+  text-align: center;
+  flex-direction: column;
+  height: 900px;
+  width: 100%;
+}
+
+#login_form{
+  margin-top: -140px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+#login_form input{
+  font-size: 28px;
+  text-align: center;
+  line-height: 1.5;
+  border-radius: 10px;
+}
+
+#ellis-logo{
+  width: 50%;
+  /* width: 100%;
+  height: auto; */
+}
+
+/* .login_container{
+  padding-top: 0%;
+} */
+
+.noscroll {
+  overflow: hidden;
+}
+
+.quiz-page {
+  display: flex;
+  flex-direction: column;
+  background-color: #A8D0E6;
+  text-align: center;
+  height: 800px;
+  width: 100%;
+  /* padding-top: 25%; */
+  /* float: left; */
+}
+
+#main-page {
+  /* display: grid;
+  grid-template-columns: 30% 70%; */
+  transition: margin-left .5s, margin-right .5s;
+}
+
+
+.selections {
+  width: 100%;
+  margin: 5% 0% 5% 15%;
+  font-size: 20px;
+  height: 40px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+
+}
+
+.selections:hover {
+  background-color: #1181f9;
+}
+
+#card-container{
+  background-color: transparent;
+  height: 325px;
+  position: relative;
+  top: 5%;
+  left: 27%;
+  bottom: 40%;
+  width: 500px;
+  /* perspective: 1000px; */
+  /* margin-left: 15%;
+  margin-top: 35%; */
+}
+
+.card {
+  display: flex;
+  position: relative;
+  width: 130%;
+  height: 170%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  top: 60%;
+  border-radius: 25px;
+}
+
+/* .flipped {
+  transform: rotateY(180deg);
+} */
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #24305E;
+  color: #fcfcd9;
+  border-radius: 25px;
+  padding: 10px;
+}
+
+.flip-card-back {
+  background-color: #6e95af;
+  color: white;
+  transform: rotateY(180deg);
+  border-radius: 25px;
+}
+
+#stats-container {
+  background-color: #374785;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 110px;
+  transition: 0.5s;
+}
+
+#stats-container h4 {
+  padding-left: 10px;
+  margin: 10px;
+}
+
+#about-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  overflow-x: hidden;
+  padding-top: 110px;
+  transition: 0.5s;
+  background-color: #374785;
+}
+
+
+/* #about-content {
+  padding-left: 10px;
+} */
+
+.about-content p {
+  line-height: 1.6;
+  font-style: italic;
+  margin: 35px;
+  display: flex;
+  font-family: sans-serif;
+  color: white;
+}
+
+#signature {
+  float: right;
+  line-height: 1.6;
+  font-style: italic;
+  margin: 35px;
+  display: flex;
+  font-family: sans-serif;
+  color: white;
+}
+
+.card-images {
+  top: 5px;
+  width: 30%;
+  margin-top: 10px;
+  /* margin: 4%; */
+}
+
+.card h2 {
+  margin: 1px;
+  font-size: 22px;
+}
+
+.card h4{
+  margin: 1px;
+}
+
+.flip-card-back h4 {
+  margin: 12%;
+  font-size: 25px;
+}
+
+.flip-card-back p {
+  margin: 5%;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+.flip-card-back button {
+  margin: 5%;
+  height: 10%;
+  width: 30%;
+  font-size: 20px;
+}
+
+.card form {
+  margin: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 130%;
+  height: 170%;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  top: 60%;
+  background-color: rgb(133, 175, 195);
+  border-radius: 25px;
+}
+
+.results button {
+  width: 50%;
+  margin-left: 25%;
+  background-color: rgba(253, 161, 181, 1);
+  border-radius: 25px;
+  font-size: 20px;
+}
+
+.results h2 {
+  margin: 2%;
+  font-size: 34px;
+  margin-top: 16%;
+  font-color: rgba(70, 123, 149, 1);
+}
+
+.results p {
+  font-color: rgba(70, 123, 149, 1);
+  margin-bottom: 9%;
+  font-size: 30px;
+  font-size: 20px;
+}
+
+#card-container h4 {
+  display: block;
+  margin-left: 150px;
+  font-size: 20px;
+
+}
+
+#select-title-top {
+  margin-top: 40%;
+}
+
+#answer-title {
+  padding-right: 10%;
+  font-family: 'Oswald',sans-serif;
+  font-size: 25px;
+}
+
+.font {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 200;
+  font-size: 30px;
+}
+
+/* @media only screen and (max-width: 1000px) {
+  #ellis-logo {
+    display: block;
+    width: 20%;
+  }
+  #login_form{
+    width: 30px;
+    font-size: 10px;
+    text-align: center;
+  }
+} */
+
+/* radio buttons start*/
+
+.form-radio {
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     appearance: none;
+     display: flex;
+     justify-content: space-between;
+     position: relative;
+     background-color: #f1f1f1;
+     color: #666;
+     top: 10px;
+     min-height: 30px;
+     min-width: 30px;
+     border: 0;
+     border-radius: 50px;
+     cursor: pointer;
+     margin-right: 7px;
+     outline: none;
+}
+
+.form-radio:checked::before {
+     position: absolute;
+     font: 13px/1 'Open Sans', sans-serif;
+     left: 11px;
+     top: 7px;
+     content: '\02143';
+     transform: rotate(40deg);
+}
+
+.form-radio:hover {
+     background-color: #f7f7f7;
+}
+
+.form-radio:checked {
+     background-color: #f1f1f1;
+}
+
+label {
+     font: 15px/1.7 'Open Sans', sans-serif;
+     color: #fcfcd9;
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+     cursor: pointer;
+}
+
+.radio-size {
+  font-size: 17px;
+}
+
+.radio-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  width: 65%;
+}
+
+/* radio buttons end*/
+
+/* submit button start (card form) */
+
+#learn-more{
+  float: right;
+  margin-top: -99px;
+  margin-right: 30px;
+  border-radius: 100%;
+  height: 85px;
+  width: 85px;
+  font-size: 19px;
+  background: #f76c6c;
+  font-family: 'Oswald', sans-serif;
+  color: white;
+}
+
+#learn-more:hover {
+  opacity: 0.5;
+}
+
+#en {
+  display: none;
+  height: 100%;
+  background: #24305E;
+  padding: 1px;
+}
+
+#es {
+  display: none;
+  height: 100%;
+  background: #24305E;
+  padding: 1px;
+}
+
+#ch {
+  display: none;
+  height: 120%;
+  background: #24305E;
+  padding: 1px;
+}
+
+.naturalization-info{
+  display: flex;
+  flex-direction: column;
+  margin: 90px 30px 10px 30px;
+  color: white
+}
+
+/* .naturalization-info ul {
+  list-style-image: url(images/flag.png)
+} */
+
+.naturalization-info li {
+  /* display: flex; */
+      max-width: 86%;
+}
+
+.eligibility, .application, .fingerprints, .interview {
+  width: 44%;
+display: flex;
+flex-direction: column;
+border: solid;
+margin: 8px;
+padding: 1px;
+border-color: white;
+border-width: thin;
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+background: #8d8da5;
+}
+
+.info-title {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.info-title-main {
+  display: flex;
+}
+.info-title button{
+  margin: 16px;
+  width: 50px;
+  border-radius: 15%;
+  font-size: 15px;
+  background: #f76c6c;
+  font-family: sans-serif;
+  color: white;
+  border-style: outset;
+}
+
+.info-title img {
+  width: 8%
+}
+.language-buttons {
+  display: flex;
+}
+
+.info-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.info-list h4{
+  text-align: center;
+  /* font-family: 'Oswald';
+  font-size: 18px; */
+}
+
+.useful-links {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 1%;
+}
+
+.useful-buttons {
+  display: flex;
+  margin-left: 5%;
+
+}
+
+.useful-links button {
+  margin: 10px;
+  height: 45px;
+  font-size: 18px;
+  background: #f76c6c;
+  font-family: sans-serif;
+  color: white;
+  border-style: outset;
+  border-radius: 10px;
+}
+
+.references button:hover {
+  opacity: 0.5;
+}
+
+.references {
+  transition: all 0.3s ease 0s;
+  height: 1000px;
+}
+
+
+.right-wrong {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+#submit-btn {
+  background-color: #fcfcd9;
+  border: none;
+  color: black;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 25px;
+}
+
+
+#submit-btn:hover {
+  opacity: 0.5;
+}
+
+/* #next {
+  background-color: #fcfcd9;
+  border: none;
+  color: black;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 25px;
+}
+
+#next:hover{
+  opacity: 0.5;
+} */
+
+
+@media screen and (min-height: 800px) {
+  #card-container {
+    margin-top: -10%;
+  }
+  .naturalization-info{
+    margin: 120px 30px 10px 30px;
+  }
+  .login_container {
+    padding-top: 10%;
+  }
+
+}
+
+
+/* submit button end (card form) */

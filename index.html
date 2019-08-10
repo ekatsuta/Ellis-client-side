@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="index.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Ellis</title>
+  </head>
+  <body>
+    <div hidden id="navbar">
+      <header>
+        <img class="logo" src="images/Ellis_logo.png" alt="">
+        <nav>
+          <ul class="nav-links">
+            <li id="list-left"><a href="#">STATS</a></li>
+            <li id="list-right"><a href="#">ABOUT</a></li>
+          </ul>
+        </nav>
+        <a href="#"><button class="logout" type="button" name="button">Logout</button></a>
+      </header>
+    </div>
+    <div id="login">
+      <div class="login_container">
+        <img id = "ellis-logo" src="images/Ellis_logo.png" alt="Logo">
+        <div id = "login_form">
+          <form  action="/users" method="post" id="name-input">
+            <input type="text" name="name" placeholder="Enter Your Name">
+            <input hidden type="submit" name="submit">
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="stats-container">
+        <canvas id="my-chart" width="500" height="750"></canvas>
+
+    </div>
+    <div id="main-page">
+      <div class = "quiz-page">
+        <div id="card-container">
+
+        </div>
+        <!-- <div class="selections-page">
+
+        </div> -->
+      </div>
+      <button id="learn-more" type="button" name="references">Learn More</button>
+    </div>
+    
+    <div id="about-container">
+
+      <div class="about-content">
+        <p>Inspired by the Ellis Island, symbol of immigration in the United States, this single page application helps you study for the civics test during the naturalization process. We hope to make this visual and interactive platform a cross-linguistic, cross-cultural aid to those applying for their citizenship.</p>
+        <p id="signature">Chris & Emi</p>
+      </div>
+      
+    </div>
+
+
+      
+
+
+    <!-- section for reference pages -->
+    <div class="references" id="en">
+      <a name="English-section"></a>
+      <div class="naturalization-info">
+
+      <div class="info-title">
+        <div class="info-title-main">
+          <h3>Information on Naturalization Process:</h3>
+          <img src="images/flag.png" alt="flag">
+
+        </div>
+        <div class="language-buttons">
+          <button type="button" name="spanish">ES</button>
+          <button type="button" name="spanish">CH</button>
+        </div>
+      </div>
+
+      <div class="info-list">
+        <div class="eligibility">
+          <h4>Eligibility:</h4>
+          <ul>
+            <li>At least eighteen years old.</li>
+            <li>A lawful permanent resident of the United States for at least five years before applying for naturalization.</li>
+            <li>Physically present in the United States for at least five years at the time of application.</li>
+            <li>Able to understand and speak English.</li>
+            <li>Of good moral character.</li>
+          </ul>
+        </div>
+
+        <div class="application">
+
+          <h4>Completing Your Application:</h4>
+
+          <ul>
+            <li>Complete Form N-400, Application for Naturalization.</li>
+            <li>Get two photographs of yourself that meet immigration service requirements (pose, size, lighting, etc.)</li>
+            <li>Collect the necessary documents.</li>
+            <li>Send your application, documents, and filing fees to the appropriate Service Center.</li>
+          </ul>
+        </div>
+
+        <div class="fingerprints">
+
+          <h4>Getting Fingerprinted:</h4>
+
+          <ul>
+            <li>Receive an appointment letter from USCIS.</li>
+            <li>Go to the fingerprint location and get your fingerprints taken.</li>
+            <li>Mail additional documents, if requested.</li>
+          </ul>
+        </div>
+
+        <div class="interview">
+
+          <h4>Being Interviewed and Tested:</h4>
+
+          <ul>
+            <li>Receive an appointment for your interview.</li>
+            <li>Go to your local office at the specified time.</li>
+            <li>Bring identification.</li>
+            <li>Answer questions about your application and your background.</li>
+            <li>Take the English and civics tests.</li>
+
+          </ul>
+        </div>
+
+        <div class="useful-links">
+          <h3>Useful Resources:</h3>
+          <div class="useful-buttons">
+            <a href="https://www1.cuny.edu/sites/citizenship-now/" target="_blank"><button type="button" name="button">CUNY Citizenship Now!</button></a>
+            <a href="https://www.nylag.org/units/financial-counseling/nycitizenship?hilite=%27citizenship%27" target="_blank"><button type="button" name="button">NY Legal Assistant Group</button></a>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="references" id="es">
+    <a name="Spanish-section"></a>
+
+    <div class="naturalization-info">
+
+    <div class="info-title">
+      <div class="info-title-main">
+        <h3>Información sobre el proceso de naturalización:</h3>
+        <img src="images/flag.png" alt="flag">
+
+      </div>
+      <div class="language-buttons">
+        <button type="button" name="spanish">EN</button>
+        <button type="button" name="spanish">CH</button>
+      </div>
+    </div>
+
+      <div class="info-list">
+        <div class="eligibility">
+          <h4>Elegibilidad:</h4>
+          <ul>
+            <li>Al menos dieciocho años.</li>
+            <li>Un residente permanente legal de los Estados Unidos durante al menos cinco años antes de solicitar la naturalización.</li>
+            <li>Presente físicamente en los Estados Unidos durante al menos cinco años en el momento de la solicitud.</li>
+            <li>Capaz de entender y hablar ingles.</li>
+            <li>De buen caracter moral.</li>
+          </ul>
+        </div>
+
+        <div class="application">
+
+          <h4>Completando Su Aplicación:</h4>
+
+          <ul>
+            <li>Complete el Formulario N-400, Solicitud de Naturalización.</li>
+            <li>Obtenga dos fotografías suyas que cumplan con los requisitos del servicio de inmigración (postura, tamaño, iluminación, etc.)</li>
+            <li>Recoger los documentos necesarios.</li>
+            <li>Envíe su solicitud, documentos y tarifas de presentación al Centro de servicio apropiado.</li>
+          </ul>
+        </div>
+
+        <div class="fingerprints">
+
+          <h4>Obtener las huellas dactilares:</h4>
+
+          <ul>
+            <li>Recibir una carta de cita de USCIS.</li>
+            <li>Ir a la ubicación de la huella digital y obtener sus huellas dactilares.</li>
+            <li>Enviar documentos adicionales, si así lo solicita.</li>
+          </ul>
+        </div>
+
+        <div class="interview">
+
+          <h4>Ser entrevistado y probado:</h4>
+
+          <ul>
+            <li>Recibe una cita para tu entrevista.</li>
+            <li>Vaya a su oficina local a la hora especificada.</li>
+            <li>Llevar identificación.</li>
+            <li>Responda preguntas sobre su aplicación y sus antecedentes.</li>
+            <li>Toma los exámenes de ingles y civismo.</li>
+
+          </ul>
+        </div>
+
+        <div class="useful-links">
+          <h3>Recursos utiles:</h3>
+          <div class="useful-buttons">
+            <a href="https://www1.cuny.edu/sites/citizenship-now/" target="_blank"><button type="button" name="button">CUNY Citizenship Now!</button></a>
+            <a href="https://www.nylag.org/units/financial-counseling/nycitizenship?hilite=%27citizenship%27" target="_blank"><button type="button" name="button">NY Legal Assistant Group</button></a>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="references" id="ch">
+    <a name="Chinese-section"></a>
+
+    <div class="naturalization-info">
+
+    <div class="info-title">
+      <div class="info-title-main">
+        <h3>歸化過程信息:</h3>
+        <img src="images/flag.png" alt="flag">
+
+      </div>
+      <div class="language-buttons">
+        <button type="button" name="spanish">EN</button>
+        <button type="button" name="spanish">ES</button>
+      </div>
+    </div>
+
+      <div class="info-list">
+        <div class="eligibility">
+          <h4>合格:</h4>
+          <ul>
+            <li>至少十八歲</li>
+            <li>申請入籍前，美國的合法永久居民至少五年</li>
+            <li>在申請時在美國實際存在至少五年</li>
+            <li>能夠理解和說英語</li>
+            <li>良好的道德品質</li>
+          </ul>
+        </div>
+
+        <div class="application">
+
+          <h4>完成您的申請:</h4>
+
+          <ul>
+            <li>填寫N-400表格，入籍申請表</li>
+            <li>獲取兩張符合移民服務要求（姿勢，大小，燈光等）的照片</li>
+            <li>收集必要的文件</li>
+            <li>將您的申請，文件和備案費用發送到相應的服務中心</li>
+          </ul>
+        </div>
+
+        <div class="fingerprints">
+
+          <h4>獲得指紋:</h4>
+
+          <ul>
+            <li>收到USCIS的預約信</li>
+            <li>轉到指紋位置並獲取指紋</li>
+            <li>如果需要，請郵寄其他文件</li>
+          </ul>
+        </div>
+
+        <div class="interview">
+
+          <h4>接受采訪和測試:</h4>
+
+          <ul>
+            <li>預約面試</li>
+            <li>在指定時間前往當地辦事處</li>
+            <li>帶來身份證明</li>
+            <li>回答有關您的申請和背景的問題</li>
+            <li>參加英語和公民考試</li>
+
+          </ul>
+        </div>
+
+        <div class="useful-links">
+          <h3>有用的參考:</h3>
+          <div class="useful-buttons">
+            <a href="https://www1.cuny.edu/sites/citizenship-now/" target="_blank"><button type="button" name="button">CUNY Citizenship Now!</button></a>
+            <a href="https://www.nylag.org/units/financial-counseling/nycitizenship?hilite=%27citizenship%27" target="_blank"><button type="button" name="button">NY Legal Assistant Group</button></a>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </body>
+</html>
