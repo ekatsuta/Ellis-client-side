@@ -2,7 +2,7 @@
 
 **Final Project for [Flatiron School](https://flatironschool.com/) Module 3 (Vanilla JavaScript & Ruby on Rails)**
 
-![Welcome Page]( "Welcome page of our app")
+![Welcome Page](images/screen_shot_1.png "Welcome page of our app")
 
 ## PROJECT DESCRIPTION
 
