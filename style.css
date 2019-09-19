@@ -21,11 +21,11 @@ header li, a, .logout {
 }
 
 #list-left {
-  margin: 0px 300px 0px 0px;
+
 }
 
 #list-right {
-  margin: 0px 0px 0px 300px;
+
 }
 
 header {
@@ -48,8 +48,15 @@ header {
     margin-left: -4%;
 }
 
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .nav-links {
-  list-style: none;
+  display: flex;
+  padding: 0% 3%;
 }
 
 .nav-links li {
@@ -83,7 +90,7 @@ header {
   background-color: pink;
   text-align: center;
   flex-direction: column;
-  height: 900px;
+  height: 100%;
   width: 100%;
 }
 
@@ -109,7 +116,7 @@ header {
 }
 
 /* .login_container{
-  padding-top: 0%;
+  width: 50%
 } */
 
 .noscroll {
@@ -151,7 +158,7 @@ header {
 
 #card-container{
   background-color: transparent;
-  height: 325px;
+  height: 300px;
   position: relative;
   top: 5%;
   left: 27%;
@@ -464,7 +471,7 @@ label {
 
 #ch {
   display: none;
-  height: 120%;
+  height: 100%;
   background: #24305E;
   padding: 1px;
 }
@@ -619,18 +626,11 @@ background: #8d8da5;
 } */
 
 
-@media screen and (min-height: 800px) {
-  #card-container {
-    margin-top: -10%;
-  }
-  .naturalization-info{
-    margin: 120px 30px 10px 30px;
-  }
-  .login_container {
-    padding-top: 10%;
-  }
-
-}
+@media all and (max-width:30em) {
+ input.submit-btn {
+  display:block;
+  margin:0.4em auto;
+ }
 
 
 /* submit button end (card form) */
