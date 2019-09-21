@@ -9,6 +9,12 @@
 ### Goal
 A web application to study for the U.S. citizenship test, using an interactive flashcards. Using ActiveRecord associations and SQLite, the application stores data on each individual user's past scores and visualizes the analysis using Chart.js. 
 
+## INSTRUCTIONS
+
+1. `npm install`
+2. In terminal, run `open index.html`
+3. Go to backend repository (https://github.com/ekatsuta/Ellis-API), `bundle install` then run `rails s` on terminal
+
 ### Functions 
 Ellis is a Vanilla JS application using Ruby on Rails API as the backend. Upon login, user is prompted to the home page where they can see past score stats, choose from different number of questions or different categories of questions. The questions are randomized for each session. Learn More button leads to detailed information of the citizenship test process, available in English, Spanish & Chinese. 
 
@@ -23,10 +29,6 @@ Ellis is a Vanilla JS application using Ruby on Rails API as the backend. Upon l
 
 **Time allocated: 5 days**
 
-## INSTRUCTIONS
-
-1. In terminal, run `open index.html`
-2. Go to backend repository (https://github.com/ekatsuta/Ellis-API) and run `rails s` on terminal
 
 ## MODEL FLOW CHART
 
