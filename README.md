@@ -34,4 +34,4 @@ Ellis is a Vanilla JS application using Ruby on Rails API as the backend. Upon l
 
 
 ### Collaborator:
-[@ekatsuta](https://github.com/chrisyuaners)
+[@chrisyuaners](https://github.com/chrisyuaners)
