@@ -23,10 +23,15 @@ Ellis is a Vanilla JS application using Ruby on Rails API as the backend. Upon l
 
 **Time allocated: 5 days**
 
+## INSTRUCTIONS
+
+1. In terminal, run `open index.html`
+2. Go to backend repository (https://github.com/ekatsuta/Ellis-API) and run `rails s` on terminal
+
 ## MODEL FLOW CHART
 
 ![Models](images/model_flowchart.png "Model Relationships")
 
 
 ### Collaborator:
-[@ekatsuta](https://github.com/ekatsuta)
+[@ekatsuta](https://github.com/chrisyuaners)
