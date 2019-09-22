@@ -20,13 +20,6 @@ header li, a, .logout {
   text-decoration: none;
 }
 
-#list-left {
-
-}
-
-#list-right {
-
-}
 
 header {
   position: fixed;
@@ -54,22 +47,28 @@ nav {
   justify-content: space-between;
 }
 
-.nav-links {
+.collapsible-nav {
   display: flex;
-  padding: 0% 3%;
+  justify-content: flex-end;
+  align-items: center
 }
 
-.nav-links li {
+/* .nav-links li {
   display: inline-block;
   padding: 0px 20px;
-}
+} */
 
-.nav-links li a {
+.collapsible-nav a {
   transition: all 0.3s ease 0s;
+  margin-right: 15%;
 }
 
-.nav-links li a:hover {
+.collapsible-nav a:hover {
   color: #0088a9;
+}
+
+nav a.icon {
+  display: none
 }
 
 .logout {
@@ -90,7 +89,7 @@ nav {
   background-color: pink;
   text-align: center;
   flex-direction: column;
-  height: 100%;
+  height: 825px;
   width: 100%;
 }
 
@@ -494,21 +493,20 @@ label {
 
 .eligibility, .application, .fingerprints, .interview {
   width: 44%;
-display: flex;
-flex-direction: column;
-border: solid;
-margin: 8px;
-padding: 1px;
-border-color: white;
-border-width: thin;
-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-background: #8d8da5;
+  display: flex;
+  flex-direction: column;
+  border: solid;
+  margin: 8px;
+  padding: 1px;
+  border-color: white;
+  border-width: thin;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  background: #8d8da5;
 }
 
 .info-title {
   display: flex;
   justify-content: space-around;
-
 }
 
 .info-title-main {
@@ -554,7 +552,6 @@ background: #8d8da5;
 .useful-buttons {
   display: flex;
   margin-left: 5%;
-
 }
 
 .useful-links button {
@@ -625,12 +622,54 @@ background: #8d8da5;
   opacity: 0.5;
 } */
 
+@media screen and (max-width:812px) {
+  .topnav a.nav-option {display: none}
+  .topnav a.icon {
+    float: right;
+    display: block;
+    text-align: right;
+    font-size: 38px;
+    color: white
+  }
+}
+
+@media screen and (max-width: 812px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a.nav-option {
+    float: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-right: 0
+  }
+  .collapsible-nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 140%;
+    align-items: center;
+    width: 100%;
+    background-color: blue;
+    justify-content: center;
+  }
+  .logout {
+    background-color: transparent;
+    padding: 0
+  }
+  .logout:hover {
+    background-color: transparent;
+    color: #0088a9;
+  }
+
+}
 
 @media all and (max-width:30em) {
  input.submit-btn {
   display:block;
   margin:0.4em auto;
  }
-
-
-/* submit button end (card form) */

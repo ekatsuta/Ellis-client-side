@@ -32,7 +32,6 @@ let toggleStats = true
 let toggleAbout = true
 // let test = false
 
-
 //initial load of all cards into cardsArray
 function loadCards() {
   fetch(`${MAIN_URL}${CARDS}`)
@@ -45,19 +44,24 @@ addEventListenersToPage()
 loadCards()
 lockScroll()
 
-//initial call to temporarily lock scroll on login page
-// function lockScroll(){
-//   document.getElementsByTagName('body')[0].classList.add('noscroll')
-// }
-//
-// function removeLockScroll(){
-//   document.getElementsByTagName('body')[0].classList.remove('noscroll')
-// }
+function collapseNav(){
+  const bar = document.getElementById("myTopNav");
+    if (bar.className === "topnav") {
+      bar.className += " responsive";
+    } else {
+      bar.className = "topnav";
+    }
+    console.log(bar.className)
+}
 
-// function loadPage(){
-//   removeLockScroll()
-//   console.log(document.getElementsByTagName('body'))
-// }
+//initial call to temporarily lock scroll on login page
+function lockScroll(){
+  document.getElementsByTagName('body')[0].classList.add('noscroll')
+}
+
+function removeLockScroll(){
+  document.getElementsByTagName('body')[0].classList.remove('noscroll')
+}
 
 //function to retrieve cards for the session
 function getCards(json) {
@@ -101,7 +105,7 @@ function renderSelection() {
     <button id="government" class="selections">Government</button>
     <button id="history" class="selections">History</button>
     <button id="geography" class="selections">Geography</button>
-  <!-- </div> -->
+  </div>
   <!-- <button id="test" class="selections">Test</button> -->
   `
 }
@@ -260,9 +264,9 @@ function addEventListenersToPage() {
     fetch(`${MAIN_URL}${USERS}`)
     .then(resp => resp.json())
     .then(json => findOrCreateUser(json, user_input))
-    // .then(removeLockScroll())
+    .then(removeLockScroll())
     .then(scrollDown())
-    // .then(lockScroll())
+    .then(lockScroll())
     .then(renderSelection())
 
     name_input.reset()
@@ -270,7 +274,6 @@ function addEventListenersToPage() {
 
   //next button
   document.addEventListener('click', e => {
-
     if (e.target.id === "next" && e.target.innerText !== "Finish"){
       loadNextQuestion(e)
     }
@@ -289,7 +292,7 @@ function addEventListenersToPage() {
       `
     }
     if (e.target.innerText === "Learn More"){
-      // removeLockScroll();
+      removeLockScroll();
       document.querySelector("#en").style.display = 'flex';
       document.querySelector("#es").style.display = 'flex';
       document.querySelector("#ch").style.display = 'flex';
@@ -499,15 +502,8 @@ function closeAbout() {
 //function to scroll down page automatically upon login
 function scrollDown(){
   const nav_bar = document.querySelector('#navbar')
-  const main_page = document.querySelector('#main-page')
-  const login_page = document.querySelector('#login')
-  // window.scrollBy(0, 2000)
-
+  window.scrollBy(0, 1000)
   setTimeout(function(){ nav_bar.hidden = false }, 500)
-  setTimeout(function(){ login_page.style.display = "none" }, 500)
-  setTimeout(function(){ main_page.hidden = false }, 500)
-  setTimeout(function(){ window.scrollBy(0, 1000) }, 550)
-
 }
 
 function scrollDown_info(){

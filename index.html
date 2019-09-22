@@ -2,21 +2,37 @@
 <html lang="en-US" dir="ltr">
   <head>
     <meta charset="utf-8">
+
+    <!-- Javascript -->
     <script type="text/javascript" src="index.js" defer></script>
+
+    <!-- Chart.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js" defer></script>
+    <script src="https://kit.fontawesome.com/5b3a70c866.js" crossorigin="anonymous"></script>
+
     <title>Ellis</title>
   </head>
+
   <body>
     <div hidden id="navbar">
       <header>
-        <nav>
+        <nav class="topnav" id="myTopNav">
           <img class="logo" src="images/Ellis_logo.png" alt="">
+          <div class="collapsible-nav">
+            <a href="#" class="nav-option">STATS</a>
+            <a href="#" class="nav-option">ABOUT</a>
+            <a href="#" class="nav-option"><button class="logout" type="button" name="button">Logout</button></a>
+          </div>
+          <a href="javascript:void(0);" class="icon" onclick="collapseNav()">
+            <i class="fas fa-bars"></i>
+          </a>
 
-            <a href="#" id="list-left">STATS</a>
-            <a href="#" id="list-right">ABOUT</a>
-
-          <a href="#"><button class="logout" type="button" name="button">Logout</button></a>
         </nav>
       </header>
     </div>
@@ -35,7 +51,7 @@
         <canvas id="my-chart" width="500" height="750"></canvas>
 
     </div>
-    <div hidden id="main-page">
+    <div id="main-page">
       <div class = "quiz-page">
         <div id="card-container">
 
